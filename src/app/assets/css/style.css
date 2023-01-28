@@ -1,0 +1,292 @@
+@charset "utf-8";
+
+* {
+	font-family: 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.e-card-preview .container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.sec01 .top-date:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 1px;
+	height: 16px;
+	background-color: #707070;
+}
+
+.sec01 .top-name {
+	display: flex;
+	justify-content: center;
+}
+
+.sec01 .top-name p {
+	color: #333;
+	font-size: 24px;
+}
+
+.sec01 .top-name em {
+	font-size: 16px;
+	font-style: normal;
+	padding: 6px 1rem 0;
+	color: #333;
+}
+
+.sec01 .top-pic {
+	height: 420px;
+	width: 100%;
+	background-color: #f4f4f4;
+	margin: 24px 0 40px;
+}
+
+.sec02 {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+.sec02 .con-tit {
+	position: relative;
+	margin-bottom: 48px;
+}
+
+.sec02 .con-tit:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -40px;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 1px;
+	height: 16px;
+	background-color: #707070;
+}
+
+.sec02 .content p {
+	font-size: 14px;
+	color: #333;
+	letter-spacing: -0.01em;
+}
+
+.sec03 {
+	background-color: #f8f8f8;
+	/* border:1px solid #E0E0E0; */
+	padding: 40px;
+}
+
+.sec03 .cal-date {
+	position: relative;
+}
+
+.sec03 .cal-date:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 12px;
+	left: 94px;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 1px;
+	height: 16px;
+	background-color: #707070;
+}
+
+.sec03 .cal-date:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 12px;
+	left: 194px;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 1px;
+	height: 16px;
+	background-color: #707070;
+}
+
+.sec03 .cal-date p {
+	text-align: center;
+	color: #333;
+}
+
+.sec03 .cal-date span {
+	color: #333;
+}
+
+.sec03 table {
+	margin-top: 16px;
+	width: 100%;
+}
+
+.sec03 table th {
+	border-bottom: 1px solid #dedede;
+}
+
+.sec03 table td,
+.sec03 table th {
+	text-align: center;
+	font-size: 13px;
+	padding: 0.8em;
+}
+
+.sec03 table tbody tr:first-child td {
+	padding-top: 1rem;
+}
+
+.sun {
+	color: #9b2d2d;
+}
+
+.sat {
+	color: #12445f;
+}
+
+.pick-day {
+	background-color: #de8989;
+	color: #fff;
+	border-radius: 5px;
+	padding: 0.3rem 0.36rem;
+	font-size: 13px;
+	font-style: normal;
+}
+
+.sec04 {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 76px;
+}
+
+.sec-tit {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 24px;
+}
+
+.sec-tit span {
+	padding: 0 1rem;
+}
+
+.sec04 .gallery {
+	height: 246px;
+	width: 100%;
+	background-color: #f4f4f4;
+}
+
+.sec05 .map {
+	height: 246px;
+	width: 100%;
+	background-color: #f4f4f4;
+}
+
+.sec05 .directions {
+	padding: 24px 40px 56px;
+}
+
+.dir-list {
+	border-bottom: 1px solid #dedede;
+	padding: 24px 0;
+}
+
+.dir-tit {
+	color: #333333;
+	padding-left: 1.2rem;
+	position: relative;
+	margin-bottom: 8px;
+}
+
+.dir-tit:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 12px;
+	left: 4px;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 1px;
+	height: 16px;
+	background-color: #707070;
+}
+
+.dir-content01 {
+	font-size: 14px;
+}
+
+.dir-content02 {
+	font-size: 14px;
+	color: #b18800;
+}
+
+.sec06 {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+.sec06 .con-tit {
+	position: relative;
+	margin: 0 0 40px;
+}
+
+.sec06 .con-tit:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -28px;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	width: 1px;
+	height: 16px;
+	background-color: #707070;
+}
+
+.sec06 .con-tit:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -28px;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+	width: 1px;
+	height: 16px;
+	background-color: #707070;
+}
+
+.sec06 .content {
+	margin: 0 40px;
+	background-color: #fcfafa;
+	border: 1px solid #dedede;
+	padding: 56px 20px;
+}
+
+.sec06 .content p {
+	font-size: 12px;
+	color: #333;
+	letter-spacing: -0.02em;
+	line-height: 1.4rem;
+}
+
+.sec07 {
+	margin-bottom: 76px;
+}
+
+.sec08 {
+	margin-bottom: 76px;
+}
+
+.share-wrap .s-tit {
+	line-height: 1rem;
+}

@@ -1,0 +1,638 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+    body { font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+
+    .Myeongjo{
+        @apply font-myeongjo font-bold
+    }
+    .Square{
+        @apply font-Square 
+    }
+    .SquareRound{
+        @apply font-SquareRound 
+    }
+    .Maru{
+        @apply font-Maru font-bold
+    }
+    .sCore{
+        @aaply font-sCore
+    }
+
+    *{
+        @apply antialiased placeholder:text-sm tracking-tight 
+    }
+
+    body{
+        @apply m-0 p-0 w-full h-full
+    }
+
+    .mainHeader{
+        @apply absolute top-0 w-full border-b border-gray-100 bg-white z-[100]
+    }
+
+    .produce{
+        @apply bg-zinc-100 h-full
+    }
+
+     input[type='text']:hover,
+    textarea:hover{
+        @apply bg-zinc-200 text-zinc-500 transition-all 
+    } 
+
+    input[type='color']{
+        @apply w-[72px] h-[33px]  bg-transparent 
+    }
+    input::-webkit-color-swatch {
+        border: 1px solid #d9d9d9;
+    }
+
+    .produce-wrap{
+        @apply flex overflow-hidden w-auto max-w-7xl m-auto 
+    }
+
+    .m-top-fix{ 
+        @apply flex justify-between w-full px-6 py-2 border-b text-xs fixed left-0 top-16  bg-zinc-100 text-gray-500  z-10
+    }
+
+    .m-top-fix.fix{
+        @apply  top-0 left-0 bg-white
+    }
+
+    .m-top-fix a{
+        @apply flex px-3 py-2 rounded-full border transition-all bg-white
+    }
+
+    .m-top-fix svg{
+        @apply mr-0.5
+    }
+
+    .m-top-fix a:hover{
+        @apply bg-zinc-200 border-zinc-300
+    }
+    
+    .leftSideWarp{
+        @apply row-span-2 bg-gray-100 h-[100vh] hidden min-w-[375px] overflow-y-scroll pt-32 pb-8
+    }
+
+    .rightSide{
+        @apply h-[100vh]
+    }
+
+    .rightSideWarp{
+        @apply h-[100vh] bg-zinc-100 overflow-y-scroll w-full pt-24 
+    }
+    
+    .card-box{
+        @apply px-10 py-8 mx-6 my-8 bg-white border border-zinc-200
+     }
+
+    .box-tit {
+      @apply text-xl text-stone-600 font-light border-b pb-1 
+    }
+
+    .input-box{
+        @apply block w-full bg-gray-100 border border-gray-200 py-1 px-2 focus:border-gray-500 focus:bg-white focus:ring-0 placeholder:font-light
+    }
+
+    .flex-grid-trans-box{
+        @apply grid grid-cols-1
+    }
+
+    .flex-grid-trans-box .input-tit{
+        @apply text-stone-500 font-normal flex flex-col w-full justify-start pt-2 text-sm mb-2
+    }
+
+    .input-tit2{
+        @apply text-sm text-stone-500 font-normal flex flex-col w-full justify-start mb-1 mt-0.5
+    }
+
+    .trans-box .input-box{
+        @apply flex mr-2 bg-gray-100 border border-gray-200 py-1 px-2 focus:border-gray-500 focus:bg-white focus:ring-0
+
+    }
+
+    .input-2 > .input-box:nth-of-type(1){
+        @apply w-1/2 mr-1
+    }
+
+    .input-2 > .input-box:nth-of-type(2){
+        @apply w-1/2 ml-1
+    }
+
+    .input-2.on > .input-box:nth-of-type(2){
+        @apply w-full
+    }
+
+    .input-2-3 > .input-box:nth-of-type(1){
+        @apply w-1/3 mr-2
+    }
+    .input-2-3 > .input-box:nth-of-type(2){
+        @apply w-2/3 mr-0
+    }
+
+    .input-3-2 > .input-box:nth-child(1){
+        @apply w-2/3 mr-2
+    }
+
+    .input-3-2 > .input-box:nth-child(2){
+        @apply w-1/3 mr-0
+    }
+
+    .notice-text{
+        @apply flex text-xs text-gray-600 justify-center
+    }
+
+    .select-box{
+        @apply block appearance-none w-full input-box text-sm py-2 text-gray-500 
+    }
+
+    .bin-textarea{
+        @apply bg-gray-100 border mt-2 py-1 px-2 ;
+        background-color:#F5F7F8;
+    }
+
+    .s-option-box{
+        @apply block absolute w-full bg-white top-12 border border-gray-200 p-2 drop-shadow	
+    }
+
+    .s-option-list{
+        @apply flex py-2 px-2 my-1 cursor-pointer hover:bg-slate-200 hover:rounded-sm text-sm
+    }
+    .contact-delete-btn,
+    .cash-delete-btn,
+    .delete-btn{
+        @apply flex items-center cursor-pointer
+    }
+    .s-option-list .delete-btn svg{
+        @apply border border-transparent hover:border hover:border-gray-500 hover:bg-gray-300 rounded-full -mt-0 -ml-2 
+    }
+
+    .s-option-list.on{
+        @apply bg-gray-100 rounded-sm
+    }
+
+    .s-option-box .addNewGroup{
+        @apply  py-2 px-2 w-full
+    }
+    .contact-box,
+    .account-box{
+        @apply hidden
+    }
+    .contact-box.on,
+    .account-box.on{
+        @apply block
+    }
+    .sampleText-btn,
+    .addTransport-btn,
+    .addContact-btn,
+    .addAccount-btn{
+        @apply text-xs text-gray-600 p-2 bg-gray-300 w-40 rounded-md text-center
+    }
+
+    .input-4 > input{
+        @apply mr-2
+    }
+
+    .input-4 > .delete-btn{
+        @apply flex items-center justify-end ml-2
+    }
+
+    .kakao-pay-logo{
+        @apply h-[28px] w-[28px] inline
+    }
+
+    .kakao-pay-logo > * {
+        fill:#A3A3A3;
+    }
+
+    .bin-box{
+        background-color:#F5F7F8;
+    }
+
+    .bin-text{
+        color:#C2C9CD;
+    }
+
+    .drag-line{
+        @apply flex w-full;
+        background-color: #f3f4f6;
+        border: 1px solid #e5e7eb;
+        padding: .4rem;
+        justify-content: space-between;
+        margin-bottom:6px;
+    }
+
+    .drag-line.on{
+        background-color:#d9d9d9;
+    }
+
+    .drag-tit{
+        @apply text-gray-600 text-sm pt-1
+    }
+
+    .drag-btn-wrap{
+        @apply flex justify-items-end;
+    }
+
+    .move-line-btn{
+        @apply mr-1 cursor-grab p-1 border border-transparent  rounded-md
+    }
+
+    .hide-btn{
+        @apply mr-2 text-gray-400 text-xs p-1 cursor-pointer block border border-transparent  rounded-md
+    }
+
+    
+    .move-line-btn:hover,
+    .hide-btn:hover{
+        @apply bg-white border border-gray-300 ease-in-out duration-300	
+    }
+
+
+    .drag-line.hide{
+        @apply bg-gray-300;
+    }
+
+    .drag-line.hide .drag-tit{
+        @apply text-gray-400;
+    }
+
+    .anime-bg-area{
+        @apply relative w-full h-full
+    }
+
+
+
+    .leave-message{
+        @apply bg-gray-100 p-4 grid gap-4 w-full justify-items-center
+    }
+    .leave-message > div{
+        @apply  text-center py-14 text-sm text-gray-500 border-b border-b-gray-200 w-full
+    }
+
+    .leave-message-btn{
+        @apply flex rounded-3xl bg-white py-2 w-[180px]  border border-gray-300 justify-center 
+    }
+
+    .leave-message-btn:hover{
+        @apply transition-all bg-gray-300
+    }
+
+    .leave-message-btn em{
+        @apply text-gray-500 text-xs not-italic pl-1
+    }
+
+
+    .guest-box blockquote{
+        @apply  min-h-[160px] p-4 text-[13px] bg-zinc-50
+    }
+
+    .guest-box blockquote .name{
+        @apply mb-1 text-gray-700 font-bold text-[13px]
+    }
+
+    .normal-btn{
+            @apply w-full  text-center p-2.5 rounded flex justify-center relative border border-gray-200 cursor-pointer
+        }
+
+    .folding-btn{
+            @apply w-full bg-gray-100 text-center p-2.5 rounded flex justify-center relative border border-gray-200 cursor-pointer
+        }
+
+    .folding-btn.open {
+        @apply rounded-b-none 
+    }   
+
+    .folding-btn i {
+        @apply absolute top-2.5 right-4 h-6 w-6 bg-no-repeat transition-all;
+    }
+
+    .folding-btn.open i{
+        @apply rotate-180
+    }
+
+    .folding-wrap{
+        @apply pb-6 px-4 text-sm border border-gray-200 border-t-0 rounded-b hidden;
+    }
+
+    .folding-list{
+        @apply flex w-full justify-between items-center border-b border-b-gray-200 py-6
+    }
+ 
+    .bankInfo{
+        @apply pr-1 grid grid-cols-2 gap-3  break-words whitespace-pre-wrap items-center justify-center;
+        grid-template-columns: minmax(2.5em, auto) minmax(0px, 2fr);
+        flex: 1 1 0%;
+    }
+    
+
+    .bankInfo > div:nth-child(odd){
+        @apply text-gray-500 text-right font-semibold;
+    }
+
+    .copy-btn button{
+        @apply border border-gray-200 bg-gray-100 text-center inline-block pl-5 pr-2 bg-no-repeat text-[12px] text-gray-500;
+    }
+
+    .share-wrap{
+        @apply flex justify-center justify-items-center
+    }
+
+    .share-wrap > div{
+        @apply p-4 cursor-pointer
+    }
+    
+    .share-wrap svg{
+        @apply w-6 h-6 m-auto  
+    }
+
+    .share-wrap svg path{
+        @apply fill-gray-500
+    }
+
+    .share-wrap .s-tit{
+        @apply text-[11px] text-gray-500 mt-1
+    }
+
+    .copyright{
+        @apply flex justify-center text-[11px] text-gray-500
+    }
+
+
+    .dim.on{
+        @apply fixed w-full h-full bg-gray-900 opacity-60 z-20 top-0 left-0 right-0 bottom-0
+    }
+
+    .popup{
+        @apply fixed top-1/2 left-1/2 z-20 bg-white -translate-x-1/2 -translate-y-1/2 w-[90%] rounded-lg text-sm shadow-md
+    }
+
+    .pop-tit{
+        @apply  py-2 px-4 text-gray-600 text-sm rounded-t-lg bg-gray-200
+    }
+
+    .popup .input-tit{
+        @apply pt-1
+    }
+
+    .button-area{
+        @apply flex justify-end border-t 
+    }
+
+    .button-area button{
+        @apply p-2 px-4 rounded mb-4 mt-3
+    }
+
+    .button-area .style1{
+        @apply border border-gray-400  mx-2
+    }
+
+    .button-area .style2{
+        @apply border border-gray-400 bg-gray-100
+    }
+    .leaveMessage-popup{
+        @apply hidden 
+    }
+
+    .leaveMessage-popup.on{
+        @apply block
+    }
+    .leaveMessage-popup textarea{
+        @apply overflow-hidden mb-5 resize-none
+    }
+
+    .leaveMessage-popup #textLengthCheck{
+        @apply absolute bg-transparent right-0 bottom-0 w-[54px] text-gray-500
+    }
+
+
+   /*******************************  userMain  *******************************/  
+
+ 
+
+   .userMain{
+       @apply w-full bg-gray-100 min-h-[calc(100vh-68px)] h-full
+   }
+
+    .userMain-wrap{
+        @apply w-full mx-auto
+    }
+
+    .listBlock{
+        @apply mt-2 grid gap-1 pb-4 bg-white shadow-md rounded
+    }
+
+    .list-view{
+        @apply h-[300px] border-b border-b-gray-200 mb-2 bg-white p-4 rounded-t
+    }
+
+    .listData .list{
+        @apply flex px-4 justify-between
+    }
+
+    .listData .list-tit{
+        @apply mt-1 text-xs text-gray-400 font-semibold
+    }
+
+    .listData .list-info{
+        @apply  text-sm text-gray-500
+    }
+
+    .listBottom{
+        @apply flex justify-between mx-4
+    }
+
+    .listBottom a{
+        @apply text-xs border border-gray-300 px-2 py-1 rounded-sm text-gray-500 transition-all duration-300
+    }
+
+    .listBottom a:hover{
+        @apply bg-gray-100 
+    }
+
+    .new-card{
+        @apply h-full  m-auto w-[200px]  bg-white transition-all drop-shadow-[0_0px_2px_rgba(0,0,0,0.2)]
+    }
+
+    .new-card:hover{
+        @apply cursor-pointer opacity-60
+    }
+
+    .list-view .more-btn{
+        @apply absolute bottom-3 right-4 rounded-full p-1 bg-gray-200 transition-all
+    }
+
+    .list-view .more-btn:hover{
+        @apply cursor-pointer opacity-[0.7]
+    }
+
+    .list-view .more-list-wrap{
+        @apply absolute w-36 bottom-14 right-4 shadow-md p-2 rounded bg-neutral-100 hidden
+    }
+
+    .list-view .more-list-wrap.on{
+        @apply block
+    }
+
+    .list-view .more-list a{
+        @apply text-xs leading-7 block px-2 text-gray-600 border-dashed	border-b transition-all 
+    }
+
+
+    .list-view .more-list a:hover{
+        @apply text-gray-900
+    }
+
+    .breadcrumb{
+        @apply pt-4 mx-4
+    }
+
+    .loginBox{
+        @apply absolute bg-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  flex flex-col justify-center items-center p-2 rounded-md shadow-lg w-[80vw] h-[30vh] transition-all
+    }
+
+    .loginBox p {
+        @apply mt-6 text-center
+    }
+
+
+    /* footer */
+    .mainFooter{
+        @apply w-full text-xs text-gray-400 bg-gray-50 py-2 px-8 border-t 
+    }
+
+    
+    .mainFooter-wrap{
+        @apply grid gap-1 justify-center
+    }
+
+
+    .mainFooter .footer-top{
+        @apply flex w-full mb-1
+    }
+
+    .mainFooter .footer-top li{
+        @apply pr-4 font-bold text-gray-500 relative
+    }
+
+    .mainFooter .footer-top li:not(:last-child) a:after{
+        @apply content-none	block absolute top-[3px] right-[3px] bg-[#a7a7a7] w-[1px] h-[12px];
+  
+    }
+
+    .mainFooter .company-info{
+        @apply grid gap-1
+     }
+
+    .mainFooter .company-info li{
+        @apply flex
+    }
+
+    .mainFooter .company-info li span{
+        @apply w-[100px]
+    }
+
+    .mainFooter .company-info li em,
+    .mainFooter .company-info li address{
+        @apply not-italic	
+    }
+
+    .mainFooter .copyright{
+        @apply justify-center mt-2 pt-2 border-t
+    }
+
+    .bg-A{
+       background-image:url("img/fabric-1-light.png")
+    }
+    
+    .bg-B{
+        background-image:url("img/groovepaper.png")
+     }
+
+    .bg-C{
+        background-image:url("img/white-sand.png")
+    }
+    
+    .bg-D{
+        background-image:url("img/otis-redding.png")
+    }
+   
+    .bg-E{
+        background-image:url("img/paper-fibers.png")
+    }
+
+    /* preview */
+
+    .m-section{
+        @apply mt-12 my-auto mb-[64px]
+    }
+
+    
+    /**************************************************************/  
+
+
+    /* @media (min-width: 640px) */
+    @screen sm{
+
+        .flex-grid-trans-box{
+            @apply flex 
+        }
+    
+        .flex-grid-trans-box .input-tit{
+            @apply text-stone-500 font-normal flex flex-col w-1/3 justify-start pt-2 text-sm mb-2
+        }
+        
+        .breadcrumb{
+            @apply pt-6 mx-0
+        }
+        .mainFooter-wrap{
+            @apply flex flex-row justify-around
+        }
+
+      
+        .leaveMessage-popup{
+            @apply w-[50ch]
+        }
+
+        .rightSideWrap{
+            @aaply h-[calc(100vh - 114px)]
+        }
+
+    } 
+      
+    /* @media (min-width: 768px) */
+    @screen md{
+
+        
+        .m-top-fix{
+            @apply hidden
+        }
+        
+        .leftSideWarp{
+            @apply block scrollbar-hide min-w-[370px] max-w-[370px] 
+        }
+
+        .rightSideWarp{
+            @apply overflow-x-hidden overflow-y-scroll scrollbar-default mb-12
+        }
+
+
+        .input-tit,
+        .input-tit2{
+            @apply w-1/5
+        }
+        
+        .loginBox{
+            @apply  w-[40vw] h-[40vh]
+        }
+
+
+    } 
+
+
+}
